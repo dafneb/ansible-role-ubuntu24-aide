@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  author: "David Burel"
+  description: "An Ansible role to install AIDE on Ubuntu 24"
+  company: ""
+  issue_tracker_url: https://github.com/dafneb/ansible-role-ubuntu24-aide/issues
+  license: MIT
+  namespace: dafneb
+  role_name: ubuntu24-sa-aide
+  min_ansible_version: "2.12"
+  platforms:
+    - name: Ubuntu
+      versions:
+        - noble
+  galaxy_tags:
+    - security
+    - ubuntu24
+    - ubuntu
+    - aide
+dependencies: []
+
+...

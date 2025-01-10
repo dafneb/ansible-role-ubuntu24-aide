@@ -1,0 +1,9 @@
+---
+quiet: true
+skip_list:
+  - 'yaml'
+  - 'no-handler'
+  - 'role-name'
+use_default_rules: true
+verbosity: 0
+...

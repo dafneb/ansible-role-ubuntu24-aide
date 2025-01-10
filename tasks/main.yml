@@ -1,0 +1,46 @@
+---
+# tasks file for ubuntu24-aide
+- name: Check OS version and family
+  ansible.builtin.fail:
+    msg: "This role can only be run against Ubuntu 24. {{ ansible_facts.distribution }} {{ ansible_facts.distribution_major_version }} is not supported."
+  when:
+    - ansible_facts.distribution == 'Ubuntu'
+    - ansible_facts.distribution_major_version is version_compare('24', '!=')
+  tags:
+    - always
+
+- name: "Run update_cache"
+  ansible.builtin.apt:
+    update_cache: true
+    cache_valid_time: "{{ updates_cache_valid_time }}"
+  tags:
+    - always
+
+- name: "Install AIDE"
+  ansible.builtin.apt:
+    name: aide
+    state: present
+  register: install_package
+  tags:
+    - always
+
+- name: "Initial setup of AIDE"
+  ansible.builtin.command: aide --init --config /etc/aide/aide.conf
+  register: init_result
+  changed_when: init_result.rc == 0
+  notify:
+    - Update AIDE database
+
+- name: "Unmask dailyaidecheck.service"
+  ansible.builtin.systemd_service:
+    name: dailyaidecheck.service
+    enabled: true
+    masked: no
+
+- name: "Unmask dailyaidecheck.timer"
+  ansible.builtin.systemd_service:
+    name: dailyaidecheck.timer
+    enabled: true
+    masked: no
+    
+...
