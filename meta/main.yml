@@ -6,7 +6,7 @@ galaxy_info:
   issue_tracker_url: https://github.com/dafneb/ansible-role-ubuntu24-aide/issues
   license: MIT
   namespace: dafneb
-  role_name: ubuntu24-sa-aide
+  role_name: ubuntu24-aide
   min_ansible_version: "2.12"
   platforms:
     - name: Ubuntu
