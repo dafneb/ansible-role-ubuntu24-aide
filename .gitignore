@@ -168,7 +168,16 @@ cython_debug/
 #.idea/
 
 # Visual Studio Code
-.vscode
+.vscode/
+
+# Local History for Visual Studio Code
+.history/
+
+# Visual Studio remote
+.remote/
 
 # My notes 
 notes.txt
+
+# Snyk Security
+.dcignore
