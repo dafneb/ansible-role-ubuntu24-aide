@@ -7,6 +7,8 @@ AIDE on Ubuntu 24
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/dafneb/ansible-role-ubuntu24-aide)
 ![GitHub contributors](https://img.shields.io/github/contributors/dafneb/ansible-role-ubuntu24-aide)
 
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/dafneb/ansible-role-ubuntu24-aide/ansible-lint.yml?label=ansible-lint)
+
 An Ansible role to install AIDE on Ubuntu 24.
 
 Requirements
