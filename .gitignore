@@ -176,8 +176,11 @@ cython_debug/
 # Visual Studio remote
 .remote/
 
-# My notes 
+# My notes
 notes.txt
 
 # Snyk Security
 .dcignore
+
+# Ansible
+.ansible/

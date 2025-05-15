@@ -1,9 +1,6 @@
-# This is a basic workflow to help you get started with Actions
 name: Ansible Lint
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches:
       - 'main'
@@ -14,23 +11,20 @@ on:
       - 'issue/*'
     paths-ignore:
       - '.github/workflows/*'
+      - '**/*.md'
+      - '**/*.txt'
   pull_request:
     branches:
       - 'main'
       - 'stable'
       - 'development'
       - 'release/v*'
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 permissions:
   contents: read
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    name: Ansible Lint # Naming the build is important to use it as a status check
-    # The type of runner that the job will run on
-    uses: dafneb/.github/.github/workflows/ansible-lint.yml@main
+    name: Ansible Lint
+    uses: dafneb/.github/.github/workflows/ansible-lint.yml@57b417cb809cc076c28f90e6573ab9d80ecebb3c
