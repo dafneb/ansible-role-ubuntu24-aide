@@ -6,7 +6,7 @@ on:
       - 'main'
       - 'development'
       - 'stable'
-      - 'release/v*"'
+      - 'release/v*'
       - 'feature/*'
       - 'issue/*'
     paths-ignore:
