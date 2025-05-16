@@ -18,7 +18,7 @@ on:
       - 'main'
       - 'stable'
       - 'development'
-      - 'release/v*"'
+      - 'release/v*'
   schedule:
     - cron: '25 22 * * 3'
 
