@@ -1,7 +1,7 @@
 ---
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: check-added-large-files
       - id: check-case-conflict
@@ -14,7 +14,7 @@ repos:
       - id: end-of-file-fixer
       - id: trailing-whitespace
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.26.0
+    rev: v8.28.0
     hooks:
       - id: gitleaks
   - repo: https://github.com/rhysd/actionlint
@@ -26,6 +26,6 @@ repos:
     hooks:
       - id: yamllint
   - repo: https://github.com/ansible/ansible-lint
-    rev: v25.4.0
+    rev: v25.9.1
     hooks:
       - id: ansible-lint
